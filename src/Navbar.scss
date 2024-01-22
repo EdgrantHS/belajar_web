@@ -1,0 +1,17 @@
+@import '~bootstrap/scss/bootstrap';
+
+$nav-bg-color: rgb(20, 20, 20);
+$nav-text-color: white; 
+
+// Path: src/App.js
+.button-size{
+    font-size: 20px;
+}
+
+.nav-text-color{
+    color: $nav-text-color;
+}
+
+nav{
+    background-color: $nav-bg-color;
+}
