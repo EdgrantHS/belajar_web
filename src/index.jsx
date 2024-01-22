@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar />
-    <App />
+    <App newTime="Last Updated: 15/01/2023 13:41:01 AM"/>
   </React.StrictMode>
 );
 
