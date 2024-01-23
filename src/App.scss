@@ -1,6 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 $bg-color: #ccc;
+$header-color: lightblue;
 $text-color: #343A40;
 $button-color: $text-color;
 $white: #fff;
@@ -20,9 +21,7 @@ $white: #fff;
   }
 }
 
-.blue{
-  background-color: blue;
-}
-.red{
-  background-color: red;
+.rounded-table {
+  border-radius: 15px;
+  overflow: hidden;
 }
