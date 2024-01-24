@@ -15,3 +15,9 @@ $nav-text-color: #343A40;
 nav{
     background-color: $nav-bg-color;
 }
+
+.custom-dropdown {
+    left: auto;
+    right: 0;
+    transform: translate3d(0px, 38px, 0px);
+  }

@@ -1,4 +1,5 @@
 import './Navbar.scss';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 function Navbar() {
   return (
@@ -16,10 +17,22 @@ function Navbar() {
           <div className="col-4">
             {/* link */}
             <div className="row align-items-center">
-              <div className="col-xl-3"><a className="button-size nav-link btn btn-lg nav-text-color" href="#">Inventory Dashboard</a></div>
-              <div className="col-xl-3"><a className="button-size nav-link btn btn-lg nav-text-color" href="#">Dashboard</a></div>
-              <div className="col-xl-3"><a className="button-size nav-link btn btn-lg nav-text-color" href="#">Beli Barang</a></div>
-              <div className="col-xl-3"><a className="button-size nav-link btn btn-lg nav-text-color" href="#">Home</a></div>
+              {/* muncul di large screen */}
+              <div className="col-xl-3 d-md-block d-none"><a className="button-size nav-link btn btn-lg nav-text-color" href="#">Inventory Dashboard</a></div>
+              <div className="col-xl-3 d-md-block d-none"><a className="button-size nav-link btn btn-lg nav-text-color" href="#">Dashboard</a></div>
+              <div className="col-xl-3 d-md-block d-none"><a className="button-size nav-link btn btn-lg nav-text-color" href="#">Beli Barang</a></div>
+              <div className="col-xl-3 d-md-block d-none"><a className="button-size nav-link btn btn-lg nav-text-color" href="#">Home</a></div>
+              {/* muncul di small screen */}
+              <div className="d-sm-block d-md-none position-relative">
+                <a className="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Menu</a>
+                <ul className="dropdown-menu dropdown-menu-end">
+                  <li><a className="dropdown-item" href="#">Inventory Dashboard</a></li>
+                  <li><a className="dropdown-item" href="#">Dashboard</a></li>
+                  <li><a className="dropdown-item" href="#">Beli Barang</a></li>
+                  <li><a className="dropdown-item" href="#">Home</a></li>
+                </ul>
+              </div>
+
             </div>
           </div>
             <div className="col-1 d-none d-md-block text-end">
