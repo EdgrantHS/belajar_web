@@ -9,8 +9,8 @@ function Navbar() {
           <div className="col-4">
             {/* title */}
             <a href='#' className='navbar-brand' >
-              <img src="https://via.placeholder.com/50" alt="logo" className="me-5"/>
-              <span className="fw-bold h3 nav-text-color">[COMPANY NAME]</span>
+              <img src="https://via.placeholder.com/50" alt="logo" className="me-5 my-2"/>
+              <span className="fw-bold h3 nav-text-color d-md-inline d-none">[COMPANY NAME]</span>
             </a>   
           </div>
           <div className="col-4 col-md-3"/>
