@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
-import App from './App';
+import InventoryDashboard from './Page/InventoryDashboard';
+import InventoryCards from './Page/InventoryCards';
+import PenambahanBarang from './Page/PenambahanBarang';
 import Navbar from './Component/Navbar';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,7 +11,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar />
-    <App newTime="Last Updated: 15/01/2023 13:41:01 AM"/>
+    <InventoryDashboard newTime="Last Updated: 15/01/2023 13:41:01 AM"/>
+    {/* <PenambahanBarang /> */}
   </React.StrictMode>
 );
 
