@@ -8,7 +8,7 @@ function Navbar() {
         <div className='row align-items-center'>
           <div className='col-4'>
             {/* title */}
-            <a href='#' className='navbar-brand'>
+            <a href='/belajar_web/' className='navbar-brand'>
               <img
                 src='https://via.placeholder.com/50'
                 alt='logo'
@@ -27,7 +27,7 @@ function Navbar() {
               <div className='col-xl-3 d-md-block d-none'>
                 <a
                   className='button-size nav-link btn btn-lg nav-text-color'
-                  href='#'
+                  href='/belajar_web/inventory'
                 >
                   Inventory Dashboard
                 </a>
@@ -35,7 +35,7 @@ function Navbar() {
               <div className='col-xl-3 d-md-block d-none'>
                 <a
                   className='button-size nav-link btn btn-lg nav-text-color'
-                  href='#'
+                  href='/belajar_web/Dashboard'
                 >
                   Dashboard
                 </a>
@@ -43,7 +43,7 @@ function Navbar() {
               <div className='col-xl-3 d-md-block d-none'>
                 <a
                   className='button-size nav-link btn btn-lg nav-text-color'
-                  href='#'
+                  href='/belajar_web/penambahan'
                 >
                   Beli Barang
                 </a>
@@ -51,9 +51,9 @@ function Navbar() {
               <div className='col-xl-3 d-md-block d-none'>
                 <a
                   className='button-size nav-link btn btn-lg nav-text-color'
-                  href='#'
+                  href='/belajar_web/print'
                 >
-                  Home
+                  Print Nota
                 </a>
               </div>
               {/* muncul di small screen */}
@@ -69,23 +69,23 @@ function Navbar() {
                 </a>
                 <ul className='dropdown-menu dropdown-menu-end'>
                   <li>
-                    <a className='dropdown-item' href='#'>
+                    <a className='dropdown-item' href='/belajar_web/inventory'>
                       Inventory Dashboard
                     </a>
                   </li>
                   <li>
-                    <a className='dropdown-item' href='#'>
+                    <a className='dropdown-item' href='/belajar_web/Dashboard'>
                       Dashboard
                     </a>
                   </li>
                   <li>
-                    <a className='dropdown-item' href='#'>
+                    <a className='dropdown-item' href='/belajar_web/penambahan'>
                       Beli Barang
                     </a>
                   </li>
                   <li>
-                    <a className='dropdown-item' href='#'>
-                      Home
+                    <a className='dropdown-item' href='/belajar_web/print'>
+                      Print Nota
                     </a>
                   </li>
                 </ul>
