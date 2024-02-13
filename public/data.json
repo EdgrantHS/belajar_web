@@ -1,0 +1,86 @@
+[
+  {
+    "Nama": "Item 1",
+    "Kategori": "Category 1",
+    "Status": "Available",
+    "Harga": 10000,
+    "Jumlah": 10
+  },
+  {
+    "Nama": "Item 2",
+    "Kategori": "Category 2",
+    "Status": "Available",
+    "Harga": 20000,
+    "Jumlah": 20
+  },
+  {
+    "Nama": "Item 3",
+    "Kategori": "Category 3",
+    "Status": "Not Available",
+    "Harga": 30000,
+    "Jumlah": 30
+  },
+  {
+    "Nama": "Item 4",
+    "Kategori": "Category 4",
+    "Status": "Available",
+    "Harga": 40000,
+    "Jumlah": 40
+  },
+  {
+    "Nama": "Item 5",
+    "Kategori": "Category 5",
+    "Status": "Not Available",
+    "Harga": 50000,
+    "Jumlah": 50
+  },
+  {
+    "Nama": "Item 6",
+    "Kategori": "Category 6",
+    "Status": "Available",
+    "Harga": 60000,
+    "Jumlah": 60
+  },
+  {
+    "Nama": "Item 7",
+    "Kategori": "Category 7",
+    "Status": "Not Available",
+    "Harga": 70000,
+    "Jumlah": 70
+  },
+  {
+    "Nama": "Item 8",
+    "Kategori": "Category 7",
+    "Status": "Not Available",
+    "Harga": 70000,
+    "Jumlah": 70
+  },
+  {
+    "Nama": "Item 9",
+    "Kategori": "Category 7",
+    "Status": "Not Available",
+    "Harga": 70000,
+    "Jumlah": 70
+  },
+  {
+    "Nama": "Item 10",
+    "Kategori": "Category 7",
+    "Status": "Not Available",
+    "Harga": 70000,
+    "Jumlah": 70
+  },
+  {
+    "Nama": "Item 11",
+    "Kategori": "Category 7",
+    "Status": "Not Available",
+    "Harga": 70000,
+    "Jumlah": 70
+  },
+  {
+    "Nama": "Item 12",
+    "Kategori": "Category 7",
+    "Status": "Not Available",
+    "Harga": 70000,
+    "Jumlah": 70
+  }
+]

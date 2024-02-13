@@ -58,7 +58,7 @@ function Navbar() {
               </div>
               {/* muncul di small screen */}
               <div className='d-sm-block d-md-none position-relative'>
-                <a
+                <div
                   className='nav-link dropdown-toggle'
                   data-bs-toggle='dropdown'
                   href='#'
@@ -66,7 +66,7 @@ function Navbar() {
                   aria-expanded='false'
                 >
                   Menu
-                </a>
+                </div>
                 <ul className='dropdown-menu dropdown-menu-end'>
                   <li>
                     <a className='dropdown-item' href='/belajar_web/inventory'>
@@ -94,13 +94,13 @@ function Navbar() {
           </div>
           <div className='col-1 d-none d-md-block text-end'>
             {/*profile  */}
-            <a href='#' className='navbar-brand'>
+            <div href='#' className='navbar-brand'>
               <img
                 src='https://via.placeholder.com/50'
                 alt='logo'
                 className='me-5'
               />
-            </a>
+            </div>
           </div>
         </div>
       </div>

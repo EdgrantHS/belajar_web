@@ -1,8 +1,25 @@
 import './InventoryCards.scss'
-import React from "react";
+import React from 'react'; 
 import Box from "../Component/box";
 
 export default class InventoryCards extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: []
+    }
+  }
+
+  componentDidMount() {
+    fetch('data.json')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ data: data })
+        console.log(data)
+      })
+      .catch(error => console.error('Error:', error));
+  }
+
   render() {
     return (
       <div className="container">
@@ -38,91 +55,15 @@ export default class InventoryCards extends React.Component {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>Item 1</td>
-                      <td>Category 1</td>
-                      <td>Available</td>
-                      <td>10000</td>
-                      <td>10</td>
-                    </tr>
-                    <tr>
-                      <td>Item 2</td>
-                      <td>Category 2</td>
-                      <td>Available</td>
-                      <td>20000</td>
-                      <td>20</td>
-                    </tr>
-                    <tr>
-                      <td>Item 3</td>
-                      <td>Category 3</td>
-                      <td>Not Available</td>
-                      <td>30000</td>
-                      <td>30</td>
-                    </tr>
-                    <tr>
-                      <td>Item 4</td>
-                      <td>Category 4</td>
-                      <td>Available</td>
-                      <td>40000</td>
-                      <td>40</td>
-                    </tr>
-                    <tr>
-                      <td>Item 5</td>
-                      <td>Category 5</td>
-                      <td>Not Available</td>
-                      <td>50000</td>
-                      <td>50</td>
-                    </tr>
-                    <tr>
-                      <td>Item 6</td>
-                      <td>Category 6</td>
-                      <td>Available</td>
-                      <td>60000</td>
-                      <td>60</td>
-                    </tr>
-                    <tr>
-                      <td>Item 7</td>
-                      <td>Category 7</td>
-                      <td>Not Available</td>
-                      <td>70000</td>
-                      <td>70</td>
-                    </tr>
-                    <tr>
-                      <td>Item 8</td>
-                      <td>Category 7</td>
-                      <td>Not Available</td>
-                      <td>70000</td>
-                      <td>70</td>
-                    </tr>
-                    <tr>
-                      <td>Item 9</td>
-                      <td>Category 7</td>
-                      <td>Not Available</td>
-                      <td>70000</td>
-                      <td>70</td>
-                    </tr>
-                    <tr>
-                      <td>Item 10</td>
-                      <td>Category 7</td>
-                      <td>Not Available</td>
-                      <td>70000</td>
-                      <td>70</td>
-                    </tr>
-                    <tr>
-                      {/* <td><input type='text' className='form-control' placeholder='Item 10' /></td> */}
-                      <td>Item 11</td>
-                      <td>Category 7</td>
-                      <td>Not Available</td>
-                      <td>70000</td>
-                      <td>70</td>
-                    </tr>
-                    <tr>
-                      <td>Item 12</td>
-                      <td>Category 7</td>
-                      <td>Not Available</td>
-                      <td>70000</td>
-                      <td>70</td>
-                    </tr>
+                    {this.state.data.map((item, index) => (
+                      <tr key={item.name + index}>
+                        <td>{item.Nama}</td>
+                        <td>{item.Kategori}</td>
+                        <td>{item.Status}</td>
+                        <td>{item.Harga}</td>
+                        <td>{item.Jumlah}</td>
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
               </div>,
