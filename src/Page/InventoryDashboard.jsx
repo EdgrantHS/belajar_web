@@ -2,6 +2,7 @@ import './InventoryDashboard.scss';
 import React from 'react';
 import Box from '../Component/box';
 import InputPair from '../Component/InputPair';
+import axios from 'axios';
 
 class App extends React.Component {
   constructor(props) {
@@ -28,9 +29,12 @@ class App extends React.Component {
   componentDidMount() {
     this.setLastUpdated(this.props.newTime);
 
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {this.setState({data : data})})
+    axios.get('https://heeve-api.000webhostapp.com/api/item/all')
+      .then(response => {
+        this.setState({ data: response.data.data })
+        // console.log(response.data.data)
+      })
+      .catch(error => console.error('Error:', error));
   }
 
   setLastUpdated(value) {
@@ -46,8 +50,24 @@ class App extends React.Component {
   }
 
   handleAdd() {
-    // BUTUH API ADD
-    console.log(this.state.addName, this.state.addCategory, this.state.addStatus, this.state.addPrice, this.state.addQuantity);
+    // console.log(this.state.addName, this.state.addCategory, this.state.addPrice, this.state.addQuantity);
+    const name = String(this.state.addName);
+    const price = parseInt(this.state.addPrice);
+    const category = String(this.state.addCategory);
+    const stock = parseInt(this.state.addQuantity);
+
+    axios.post('https://heeve-api.000webhostapp.com/api/item/add', [{
+      name: name, 
+      price: price,
+      category: category,
+      stock: stock,
+    }])
+      .then(response => {
+        console.log(response)
+      })
+      .catch(error => console.error('Error:', error));
+
+    console.log(name, price, category, stock);
   }
 
   handleInputChange(event) {
@@ -90,7 +110,7 @@ class App extends React.Component {
               <Box customClass="row my-2" header="Add New Item" items={[
                 <InputPair id="a1" label="Nama" onChange={this.handleInputChange} value={this.state.addName} name="addName" />,
                 <InputPair id="a2" label="Kategori" onChange={this.handleInputChange} value={this.state.addCategory} name="addCategory" />,
-                <InputPair id="a3" label="Status" onChange={this.handleInputChange} value={this.state.addStatus} name="addStatus" />,
+                // <InputPair id="a3" label="Status" onChange={this.handleInputChange} value={this.state.addStatus} name="addStatus" />,
                 <InputPair id="a4" label="Harga" onChange={this.handleInputChange} value={this.state.addPrice} name="addPrice" />,
                 <InputPair id="a5" label="Jumlah" onChange={this.handleInputChange} value={this.state.addQuantity} name="addQuantity" />,
                 <div className="d-flex justify-content-center align-items-center">
@@ -108,21 +128,19 @@ class App extends React.Component {
                       <tr className='table-primary'>
                         <th scope="col">Nama</th>
                         <th scope="col">Kategori</th>
-                        <th scope="col">Status</th>
                         <th scope="col">Harga</th>
                         <th scope="col">Jumlah</th>
                       </tr>
                     </thead>
                     <tbody>
-                        {this.state.data.map((data, index) => (
-                          <tr key={data.name + index}> 
-                            <td>{data.Nama}</td>
-                            <td>{data.Kategori}</td>
-                            <td>{data.Status}</td>
-                            <td>{data.Harga}</td>
-                            <td>{data.Jumlah}</td>
-                          </tr>))
-                        }
+                      {this.state.data.map((data, index) => (
+                        <tr key={data.name + index}> 
+                          <td>{data.name}</td>
+                          <td>{data.category}</td>
+                          <td>{data.price}</td>
+                          <td>{data.stock}</td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
                 </div>,
